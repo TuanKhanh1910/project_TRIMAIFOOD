@@ -1,0 +1,22 @@
+.breadcrumb {
+  background: #eff1e2;
+  margin-top: 3.5rem;
+  padding: 1.7rem 0;
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  &-item {
+    .text {
+      color: #50505080;
+      opacity: 70%;
+    }
+    .icon {
+      transform: translateY(0.3rem);
+    }
+    .textNow {
+      color: $color-pri;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../components/breadcrumbProductDtails";
+@import "../components/sliderProductDetails";
+@import "../components/desProductDetails";
+@import "../components/relatedProductDetails";
+#productDetails {
+  background-image: url("../../assets/images/bg_productDetails.png");
+  min-height: calc((1665 / 1728) * 100vw);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.haeder_productDetails {
+  background-color: white;
+}

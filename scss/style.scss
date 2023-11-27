@@ -18,8 +18,14 @@
 @import "./core/flex";
 
 // Component
+
 @import "./components/header";
+@import "./components/scroll";
+@import "./components/burger";
+@import "./components/mobile";
+
 @import "./components/footer";
+@import "./components/backtotop";
 
 // Layout
 @import "./layouts/swpier";
@@ -27,5 +33,8 @@
 @import "./layouts/distance";
 @import "./layouts/text";
 @import "./layouts/btn";
+@import "./layouts/form";
+@import "./layouts/bannerDetails";
 // Pages
 @import "./pages/home";
+@import "./pages/productDetails";

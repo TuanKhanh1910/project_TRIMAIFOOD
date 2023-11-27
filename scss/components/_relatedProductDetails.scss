@@ -1,0 +1,64 @@
+.related {
+  padding: var(--pd-main) 0;
+  @include max(900px) {
+    padding: 4rem 0;
+  }
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+    @include max(630px) {
+      flex-direction: column;
+      gap: 1.6rem;
+      margin-bottom: 3rem;
+    }
+  }
+  &-title {
+    font-family: "BodoniFLF";
+    text-transform: uppercase;
+    color: $color-pri;
+    font-size: 5.2rem;
+    @include max(700px) {
+      font-size: 4.2rem;
+    }
+    @include max(432px) {
+      font-size: 3rem;
+    }
+  }
+  &-bottom {
+    overflow: hidden;
+    border-radius: 5rem;
+  }
+  &-img {
+    display: block;
+    padding-top: calc((1 / 1) * 100%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 5rem;
+    img {
+      @include Img;
+    }
+  }
+  &-subTitle {
+    margin-top: 1.6rem;
+    padding: 1.2rem 1rem;
+    border: 2px solid $color-pri;
+    border-radius: 2rem;
+    transition: all 0.5s;
+    &:hover {
+      background-color: $color-pri;
+      border: 2px solid transparent;
+      .related-text {
+        color: $color-white;
+      }
+    }
+  }
+  &-text {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-pri;
+    transition: all 0.5s;
+  }
+}

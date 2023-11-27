@@ -1,6 +1,6 @@
-@import url("../../assets/Font/Sarabun/stylesheet.css");
-@import url("../../assets/Font/Oswald/");
-@import url("../../assets/Font/bodoni/stylesheet.css");
+@import url("../assets/Font/Sarabun/stylesheet.css");
+@import url("../assets/Font/Oswald/");
+@import url("../assets/Font/bodoni/stylesheet.css");
 
 * {
   box-sizing: border-box;
@@ -56,11 +56,17 @@ textarea {
 }
 
 .main {
+  min-height: 68vh;
+  // padding-top: var(--size-hd);
+  padding-top: calc(var(--size-hd-top) + var(--size-hd-bottom) + 1.5rem);
+  @include max(1199px) {
+    padding-top: calc(var(--size-hd-top) + 4.5rem);
+  }
 }
 
 .container {
   width: 100%;
-  max-width: 123rem;
+  max-width: 121rem;
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;

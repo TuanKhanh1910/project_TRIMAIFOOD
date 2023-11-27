@@ -1,0 +1,188 @@
+#sliderProductDetails {
+  .slider {
+    padding: var(--pd-main) 0;
+    @include max(900px) {
+      padding: 4rem 0;
+    }
+    &-content {
+      justify-content: space-between;
+    }
+    .col-8,
+    .col-4 {
+      @include max(900px) {
+        width: 100%;
+      }
+    }
+    &-swiper {
+      overflow: hidden;
+      border-radius: 5rem;
+    }
+    &-img.big {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      //   padding-top: calc((1 / 1) * 100%);
+      //   position: relative;
+      //   img {
+      //     @include Img;
+      //   }
+    }
+    &-wrap.carousel {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-right: 11.4rem;
+      @include max(1200px) {
+        margin-right: 0;
+      }
+
+      position: relative;
+    }
+    &-contact {
+      display: inline-flex;
+      &:hover {
+        .fa-phone {
+          color: $color-button;
+        }
+      }
+      .fa-phone {
+        position: relative;
+        color: $color-white;
+        z-index: 2;
+        font-weight: 700;
+      }
+    }
+    .mySwiper {
+      width: 100%;
+      height: 45rem;
+      @include max(900px) {
+        height: 100%;
+      }
+      .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        gap: 2rem;
+        .swiper-slide {
+          height: initial !important;
+          margin-bottom: 0 !important;
+          opacity: 0.4;
+          transition: all 0.5s;
+        }
+        .swiper-slide-thumb-active {
+          opacity: 1;
+          transition: all 0.5s;
+        }
+      }
+    }
+    &-img.small {
+      padding-top: calc((130 / 130) * 100%);
+      position: relative;
+      overflow: hidden;
+      border-radius: 2.8rem;
+      cursor: pointer;
+      img {
+        @include Img;
+      }
+    }
+    &-title {
+      color: $color-pri;
+      font-family: "BodoniFLF";
+      line-height: 5.5rem;
+      margin-bottom: 2rem;
+      @include max(1040px) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+    }
+    &-subTitle {
+      color: $color-text;
+      margin-bottom: 4rem;
+      @include max(1200px) {
+        margin-bottom: 2rem;
+      }
+    }
+    &-category {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      margin-bottom: 1.5rem;
+      .textBold {
+        color: $color-pri;
+      }
+      .text {
+        color: $color-text;
+      }
+    }
+    &-price {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      margin-bottom: 1.5rem;
+      .textBold {
+        color: $color-pri;
+      }
+      .number {
+        color: $color-text;
+      }
+    }
+  }
+}
+
+.slider-button-next,
+.slider-button-prev {
+  background-color: #f9b14f;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 5rem;
+  --w: 4rem;
+  width: var(--w);
+  height: var(--w);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.5s;
+  position: absolute;
+  @include max(900px) {
+    display: none;
+  }
+  &:hover {
+    background-color: $color-white;
+    border: 1px solid #f9b14f;
+    .fa-solid {
+      color: #f9b14f;
+    }
+  }
+
+  .fa-solid {
+    font-size: 2.5rem;
+    color: $color-white;
+  }
+  &::after {
+    display: none;
+  }
+}
+.slider-button-next {
+  position: absolute;
+  right: calc((var(--w) - 4rem) * -1);
+  @include max(900px) {
+    right: calc((var(--w) - 7rem) * -1);
+  }
+
+  bottom: 0;
+  left: auto;
+}
+.slider-button-prev {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: calc((var(--w) - 12rem) * -1);
+  @include max(900px) {
+    right: calc((var(--w) - 13rem) * -1);
+  }
+}
